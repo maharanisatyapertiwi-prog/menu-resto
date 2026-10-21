@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Pengaturan dasar halaman website -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul yang tampil pada tab browser -->
+    <title>MenuMate | Menu Digital Cafe</title>
+
+    <!-- Deskripsi website untuk mesin pencari -->
+    <meta name="description" content="Menu digital cafe untuk melihat makanan dan minuman dengan mudah.">
+
+    <!-- Menghubungkan file CSS untuk mengatur tampilan -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BAGIAN HEADER: Logo dan navigasi website -->
+    <header class="header">
+        <div class="container">
+            <a href="#beranda" class="logo">MenuMate<span>.</span></a>
+
+            <!-- Navigasi menuju bagian website -->
+            <nav class="navbar">
+                <a href="#beranda">Beranda</a>
+                <a href="#menu">Menu</a>
+                <a href="#tentang">Tentang</a>
+            </nav>
+
+            <!-- Tombol untuk membuka keranjang pesanan -->
+            <button type="button" id="tombol-keranjang" class="cart-button">
+                Keranjang (<span id="jumlah-keranjang">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- BAGIAN UTAMA: Sambutan untuk pengunjung -->
+    <main>
+
+        <section id="beranda" class="hero">
+            <div class="container">
+                <p class="subtitle">SELAMAT DATANG DI MENUMATE</p>
+
+                <h1>Temukan Menu Favoritmu dengan Mudah</h1>
+
+                <p>
+                    Jelajahi berbagai pilihan makanan dan minuman
+                    favoritmu dalam satu menu digital.
+                </p>
+
+                <!-- Tombol menuju daftar menu -->
+                <a href="#menu" class="button">Lihat Menu</a>
+            </div>
+        </section>
+
+        <!-- BAGIAN MENU: Pencarian dan daftar produk -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+
+                <h2>Daftar Menu</h2>
+
+                <p class="section-description">
+                    Pilih makanan dan minuman sesuai seleramu.
+                </p>
+
+                <!-- Kolom pencarian menu berdasarkan nama -->
+                <div class="menu-controls">
+                    <label for="pencarian-menu">Cari menu</label>
+
+                    <input
+                        type="search"
+                        id="pencarian-menu"
+                        placeholder="Contoh: Nasi Goreng"
+                    >
+
+                    <!-- Filter berdasarkan kategori menu -->
+                    <label for="filter-kategori">Kategori</label>
+
+                    <select id="filter-kategori">
+                        <option value="semua">Semua Menu</option>
+                        <option value="makanan">Makanan</option>
+                        <option value="minuman">Minuman</option>
+                        <option value="camilan">Camilan</option>
+                    </select>
+                </div>
+
+                <!--
+                    Daftar menu akan ditampilkan melalui JavaScript.
+                    Setiap produk nantinya dibuat dalam bentuk kartu.
+                -->
+                <div id="daftar-menu" class="menu-grid">
+                    <p>Menu akan ditampilkan di sini.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BAGIAN KERANJANG: Ringkasan pesanan pengunjung -->
+        <section id="keranjang" class="cart-section">
+            <div class="container">
+
+                <h2>Keranjang Pesanan</h2>
+
+                <!-- Daftar produk yang dipilih pengunjung -->
+                <div id="daftar-keranjang">
+                    <p>Keranjang masih kosong.</p>
+                </div>
+
+                <!-- Total harga akan dihitung oleh JavaScript -->
+                <p class="cart-total">
+                    Total: <span id="total-harga">Rp0</span>
+                </p>
+
+                <!-- Tombol mengosongkan seluruh keranjang -->
+                <button type="button" id="kosongkan-keranjang">
+                    Kosongkan Keranjang
+                </button>
+
+                <!-- Tombol simulasi penyelesaian pesanan -->
+                <button type="button" id="buat-pesanan">
+                    Buat Pesanan
+                </button>
+
+            </div>
+        </section>
+
+        <!-- BAGIAN TENTANG: Penjelasan tujuan website -->
+        <section id="tentang" class="about-section">
+            <div class="container">
+                <h2>Tentang MenuMate</h2>
+
+                <p>
+                    MenuMate adalah website menu digital yang membantu
+                    pengunjung melihat makanan dan minuman tanpa harus
+                    menggunakan buku menu fisik.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BAGIAN FOOTER: Informasi penutup website -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 MenuMate. Menu Digital Cafe.</p>
+        </div>
+    </footer>
+
+    <!-- Menghubungkan file JavaScript untuk menjalankan fitur website -->
+    <script src="script.js"></script>
+
+</body>
+</html>
